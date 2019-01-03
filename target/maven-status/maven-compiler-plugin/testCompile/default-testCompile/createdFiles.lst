@@ -1,0 +1,7 @@
+runnerPackage\RunnerTest.class
+stepDefinition\Hooks.class
+basePackage\BaseClass.class
+pagesPackage\ManifestLandingPage.class
+pagesPackage\DashboardPage.class
+stepDefinition\StepsDefinition.class
+commonMethods\CommonMethods.class
