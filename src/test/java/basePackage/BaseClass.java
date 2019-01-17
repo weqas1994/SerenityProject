@@ -2,21 +2,23 @@ package basePackage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import net.thucydides.core.annotations.Managed;
 
 public class BaseClass {
 
+	@Managed
 	public static WebDriver driver;
 
-	public static void tearDown() {
-		driver.quit();
-
-	}
-
 	public static void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Uncleared\\Desktop\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://localhost:4200/");
 
+	}
+
+	public static void tearDown() {
+
+		driver.quit();
 	}
 
 }

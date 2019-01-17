@@ -11,6 +11,20 @@ Installations Steps
 7. Then load existing project into eclipse
 
 
+Steps for people running on MAC operating Systems
+1. Download the latest ChromeDriver https://sites.google.com/a/chromium.org/chromedriver/downloads download mac64
+2. Once downloaded drag and drop chromedriver onto desktop and create a folder for Driver and place chromedriver in folder
+3. Right click on Chromedriver location and copy location of the directory
+4. Then go to eclipse expand project expand src/test/java 
+4. Expand basePackage
+5. Click double click BaseClass.java
+6. Scroll until you see setUp() method, and within System.setProperty replace the path of existing path of driver to current path of driver
+7. Make sure that you dont add the .exe for chromedriver "YourPathtoDriverFolder\chromedriver" 
+8. Next go to your pom.xml located within your project level folder
+9. scroll down close to the end where you'll see plugins for maven-compiler-plugin delete the path of my java
+<fork>true</fork>
+<executable>C:\Program Files\Java\jdk\bin\javac.exe</executable> 
+
 How to run project through command line
 1. make sure you ng serve --open Stevens project
 2. go into project directory
