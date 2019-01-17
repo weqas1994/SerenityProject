@@ -12,6 +12,7 @@ public class BaseClass {
 	public static void setUp() {
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/Driver/chromedriver.exe");
 		driver = new ChromeDriver();
+		driver.manage().window().fullscreen();
 		driver.get("http://localhost:4200/");
 
 	}
